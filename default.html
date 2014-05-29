@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>WindowsStoreKiosk</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0.RC/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0.RC/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0.RC/js/ui.js"></script>
+
+    <!-- WindowsStoreKiosk references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+    <script src="/js/navigator.js"></script>
+</head>
+<body>
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/AttractLoopPlayer/AttractLoopPlayer.html'}"></div>
+    <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
+    </div> -->
+    <script type="text/html" id="BoxVideoPlayer">
+        <div class="boxedvideo <@=containerclass@>">
+            <video class="boxedvideoplayer <@=vidplayerclass@>" width="320" height="240" src="ms-appx:///<@=vidsrc@>" poster="ms-appx:///<@=vidposterframe@>" />
+        </div>
+    </script>
+    <script type="text/html" id="HeroMessageBodyVertical">
+      <div class="heromessagebodyvertical clearfix" style="-ms-grid-column:<@=column@>;">
+        <@ if (MediaFile && (MediaFile !='')) {@>
+            <img class="heroimg" src="ms-appx:///content/<@=MediaFile@>" />
+        <@ } @>
+            <div class="messaging">
+            <h3><@=title@></h3>
+            <div>
+                <@=text@>
+            </div>
+         </div>
+      </div>
+    </script>
+    
+    <script type="text/html" id="LeftMessageBodyRightVideo">
+        <div class="leftmessagebodyrightvideo clearfix" style="-ms-grid-column:<@=column@>;">
+        <@ if (MediaFile && (MediaFile !='')) {@>
+            <img class="heroimg" src="ms-appx:///content/<@=MediaFile@>" />
+        <@ } @>
+            <div class="messaging">
+                <h3><@=title@></h3>
+                <div>
+                    <@=text@>
+                </div>
+            </div>    
+        </div>
+    </script>
+
+    <script type="text/html" id="LeftMessageBodyRightImage">
+      <div class="leftmessagebodyrightimage clearfix leftmessagebodyrightimage_wide" style="-ms-grid-column:<@=column@>; -ms-grid-row:<@=row@>;">
+         <img src="ms-appx:///content/<@=MediaFile@>" />
+         <div class="messaging">
+            <h3 class="standardtitle">Windows 8 is here</h3>
+            <div class="bodytext">Windows 8 takes a new approach to design. Learn how these brands are using live tiles on the Start Screen and full-screen layouts to crate unique and immersive experiences.</div>
+         </div>
+      </div>
+    </script>
+    <script type="text/html" id="GridIconTiles">
+        <div class="gridfourlivetiles iconographic <@=extraclass@>" style="-ms-grid-row:<@=row@>;-ms-grid-column:<@=column@>">
+            <@ for (ii=0; ii < SubItems.length; ii++) { @>
+                <div class="griditem icongriditem <@=SubItems[ii].cssName@>">
+                    <table width="100%" height="180">
+                        <tr><td align="center" valign="middle">
+                            <img src="<@=SubItems[ii].icon@>" />
+                        </td></tr>
+                    </table>
+                    <div class="gridtextholder">
+                        <div class="gridtitle"><@=SubItems[ii].title@></div>
+                        <div class="gridbody"><@=SubItems[ii].text@></div>                    
+                    </div>
+                </div>
+            <@ } @>
+        </div>
+    </script>
+    <script type="text/html" id="GridFourLiveTiles">
+        <div class="gridfourlivetiles">
+            <@ for (ii=0; ii < SubItems.length; ii++) { @>
+                <div class="griditem <@=SubItems[ii].cssName@>">
+                    <div class="gridtext"><@=SubItems[ii].title@></div>
+                </div>
+            <@ } @>
+        </div>
+    </script>
+    <script type="text/html" id="NullLayout">
+        <div />
+    </script>
+    <script type="text/html" id="GridSixLiveTiles">
+        <div class="gridsixlivetiles">
+            <@ for (ii=0; ii < SubItems.length; ii++) { @>
+                <div class="griditem <@=SubItems[ii].cssName@>">
+                    <div class="gridtext"><@=SubItems[ii].title@></div>
+                </div>
+            <@ } @>
+        </div>
+    </script>
+    <script type="text/html" id="widget_gridstyle">
+        var pStyle ='';
+        if (row) { pStyle += '-ms-grid-row:' + row };
+        if (column) { pStyle += '-ms-grid-column:' + column };
+        return pStyle;
+    </script>
+    <script type="text/html" id="LeftMessageBodyHeroInverted">
+        <div class="leftmessagebodyhero inverted <@=extraclass@>">
+        <@ if (MediaFile && (MediaFile !='')) {@>
+            <img class="heroimg" src="ms-appx:///content/<@=MediaFile@>"  />
+        <@ } @>
+            <div class="standardtitle darkbox box2by1 abstop">
+                <@=title@>
+            </div>
+            <div class="bodytext lightbox box1by1 absbottom">
+                <@=text@>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="SnapLeftMessageBodyHeroInverted">
+        <div class="snapleftmessagebodyhero inverted <@=extraclass@>">
+
+            <div class="standardtitle darkbox box2by1">
+                <@=title@>
+            </div>
+            <div class="bodytext lightbox box1by1">
+                <@=text@>
+            </div>        
+        <@ if (MediaFile && (MediaFile !='')) {@>
+            <img class="heroimg" src="ms-appx:///content/<@=MediaFile@>"  />
+        <@ } @>
+        </div>
+    </script>
+    <script type="text/html" id="LeftMessageBodyHero">
+        <div class="leftmessagebodyhero clearfix <@=extraclass@>">
+            <div class="standardtitle darkbox box2by1">
+                <@=title@>
+            </div>
+            <div class="bodytext lightbox box2by1">
+                <@=text@>
+            </div>
+        <@ if (MediaFile && (MediaFile !='')) {@>
+            <img class="heroimg" src="ms-appx:///content/<@=MediaFile@>"  />
+        <@ } @>
+        </div>
+    </script>
+    <script type="text/html" id="RightMessageBodyBottom">
+        <div class="rightmessagebodybottom  <@=extraclass@>">
+        <@ if (MediaFile && (MediaFile !='')) {@>
+            <img class="heroimg absleft absbottom" src="ms-appx:///content/<@=MediaFile@>"  />
+        <@ } @>
+            <div class="standardtitle darkbox box2by1 abstop absleft">
+                <@=title@>
+            </div>
+            <div class="bodytext lightbox box2by1 abstop absright">
+                <@=text@>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="SnapRightMessageBodyBottom">
+        <div class="snaprightmessagebodybottom  <@=extraclass@>">
+            <div class="standardtitle darkbox box2by1">
+                <@=title@>
+            </div>
+            <div class="bodytext lightbox box2by1">
+                <@=text@>
+            </div>
+        <@ if (MediaFile && (MediaFile !='')) {@>
+            <img class="heroimg" src="ms-appx:///content/<@=MediaFile@>"  />
+        <@ } @>
+        </div>
+    </script>
+    <script type="text/html" id="BottomMessageTopHero">
+        <div class="bottommessagetophero clearfix">
+            <@ for (ii=0; ii < SubItems.length; ii++) { @>
+            <div class="messaging <@=SubItems[ii].cssName@>">
+                <div>
+                    <img src="ms-appx:///<@=SubItems[ii].icon@>" />
+                </div>
+                <h3><@=SubItems[ii].title@></h3>
+            </div>
+            <@ } @>
+        </div>
+    </script>
+    <script type="text/html" id="TopMessageBottomBody">
+        <div class="topmessagebottombody clearfix <@=extraclass@>" style="position:relative;left:<@=column@>px">
+            <div class="standardtitle darkbox box2by1">
+                <@=title@>
+            </div>
+            <div class="bodytext lightbox box2by1">
+                <@=text@>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="SnapTopMessageBottomBody">
+        <div class="topmessagebottombody clearfix <@=extraclass@>" style="position:relative;left:<@=column@>px">
+            <div class="standardtitle darkbox box2by1">
+                <@=title@>
+            </div>
+            <div class="bodytext lightbox box2by1">
+                <@=text@>
+            </div>
+        <@ if (MediaFile && (MediaFile !='')) {@>
+            <img class="heroimg" src="ms-appx:///content/<@=MediaFile@>"  />
+        <@ } @>
+        </div>
+    </script>
+
+    <script type="text/html" id="BoxedVideoContainer">
+        <div class="boxedvideocontainer <@=extraclass@>" style="position:relative;left:<@=column@>px">
+            <div class="standardtitle darkbox box1by1 abstop absleft">
+                <@=title@>
+                <img src="ms-appx:///content/<@=icon@>" class="title-icon" />
+            </div>
+            <div class="bodytext lightbox box1by1 absbottom absleft">
+                <@=text@>
+            </div>
+            <div class="boxedvideo large-video-player abstop absright">
+                <video class="boxedvideoplayer <@=vidplayerclass@>" src="ms-appx:///content/<@=vidsrc@>" poster="ms-appx:///content/<@=vidposterframe@>" />
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="SnapBoxedVideoContainer">
+        <div class="snapboxedvideocontainer <@=extraclass@>">
+            <div class="boxedvideo large-video-player">
+                <video class="boxedvideoplayer <@=vidplayerclass@>" src="ms-appx:///content/<@=vidsrc@>" poster="ms-appx:///content/<@=vidposterframe@>" />
+            </div>
+            <div class="standardtitle darkbox box1by1">
+                <@=title@>
+                <img src="ms-appx:///content/<@=icon@>" class="title-icon" />
+            </div>
+            <div class="bodytext lightbox box1by1">
+                <@=text@>
+            </div>
+
+        </div>
+    </script>
+
+    <script type="text/html" id="SmallVerticalTile">
+        <div class="smallverticallinktile" style="-ms-grid-column:<@=column@>; -ms-grid-row:<@=row@>">
+            <div class="messaging">
+                <h3>
+                    <@=title@>
+                </h3>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="SmallHorizontalTile">
+        <@ var actionString = JSON.stringify(action); @>
+        
+        <div data-action='<@=actionString@>' class="smallhorizontallinktile <@=extraclass@>" style="-ms-grid-row:<@=row@>;-ms-grid-column:<@=column@>">
+            <img src="ms-appx:////content/<@=MediaFile@>" />
+        </div>
+    </script>
+    <script type="text/html" id="VideoTile">
+        <div class="largevideotile boxedvideo <@=extraclass@>" style="-ms-grid-row:<@=row@>;-ms-grid-column:<@=column@>">
+            <video class="boxedvideoplayer <@=vidplayerclass@>" src="ms-appx:///content/<@=vidsrc@>" poster="ms-appx:///content/<@=MediaFile@>" />
+        </div>
+    </script>
+    <script type="text/html" id="AdvertiserContentBlock">
+        <div class="boxwrapper advertiserContentBlock">
+            <div>
+                <div class="box2by1 standardtitle lightbox">
+                    <@=title@>
+                </div>
+                <div class="bodytext darkbox box2by1">
+                    <@=text@>
+                </div>
+            </div>
+            <div class="annotatedVideo" style="position: absolute; right: 0px">
+                <div>
+                    <h3 class="standardtitle darkbox box1by1"><@=annotatedvideotitle@>
+                    </h3>
+                    <div class="bodytext lightbox box1by1 ">
+                        <@=annotatedvideotext@>
+                    </div>
+                </div>
+            <div class="boxedvideo large-video-player abstop absright">
+                <video class="boxedvideoplayer <@=vidplayerclass@>" src="ms-appx:///content/<@=vidsrc@>" poster="ms-appx:///content/<@=vidposterframe@>" />
+            </div>
+            </div>
+        </div>
+    </script>
+</body>
+</html>

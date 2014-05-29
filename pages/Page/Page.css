@@ -1,0 +1,160 @@
+﻿body {
+}
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+
+}
+
+@media screen and (-ms-view-state: filled) {
+
+}
+
+@media screen and (-ms-view-state: snapped) {
+
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+
+}
+
+.win-backbutton {
+    position: absolute;
+    top: 55px;
+    left: 50px;
+}
+
+.main {
+    /*-ms-grid-columns: 120px 1fr;
+    -ms-grid-rows: 85px;*/
+    -ms-grid-columns: (1px)[1366];
+    -ms-grid-rows: (1px)[768];
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+}
+
+    .main header {
+        display: block;
+        position: fixed;
+        top: 50px;
+        left: 120px;
+        font: 18px Segoe UI;
+        font-weight: bolder;
+    }
+
+        /*.main header .topHeader {
+            -ms-grid-column: 2;
+            -ms-grid-row: 2;
+            font-size: 20pt;
+        }*/
+
+    .main .content {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1366;
+        -ms-grid-row: 85;
+        -ms-grid-row-span: 683;
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: 100%;
+        background: #1a1a1a;
+    }
+
+        .main .content .columns {
+            -ms-grid-rows: 1fr;
+            display: -ms-grid;
+            /*height: calc(100% - 50px);*/
+            height: 100%;
+            width: 8500px;
+            overflow-y: hidden;
+        }
+
+        .main .content .column {
+            float: left;
+            -ms-grid-columns: 1fr;
+            -ms-grid-rows: 80px;
+            display: -ms-grid;
+            height: 100%;
+        }
+
+        .main .content .columnTitle {
+            font: 20px Segoe UI;
+            font-weight: lighter;
+            line-height:0.8em;
+        }
+
+        .main .content .info {
+            -ms-grid-row: 2;
+            display: -ms-grid;
+            width: 900px;
+            /*-ms-grid-columns: (1px)[900];*/
+            -ms-grid-rows: (1px)[688];
+
+        }
+
+        .main .content .col1 {
+            -ms-grid-column: 1;
+            -ms-grid-row: 1;
+        }
+
+            .main .content .col1 .columnTitle {
+                position: absolute; /* <- Important! */
+            }
+
+        .main .content .col2 {
+            -ms-grid-column: 2;
+            -ms-grid-row: 1;
+        }
+
+        .main .content .col3 {
+            -ms-grid-column: 3;
+            -ms-grid-row: 1;
+        }
+
+        .main .content .col4 {
+            -ms-grid-column: 4;
+            -ms-grid-row: 1;
+        }
+
+        .main .content .col5 {
+            -ms-grid-column: 5;
+            -ms-grid-row: 1;
+        }
+
+        .main .content .col6 {
+            -ms-grid-column: 6;
+            -ms-grid-row: 1;
+        }
+
+        .main .content .col7 {
+            -ms-grid-column: 7;
+            -ms-grid-row: 1;
+        }
+
+        .main .content .col8 {
+            -ms-grid-column: 8;
+            -ms-grid-row: 1;
+        }
+
+        .main .content .col9 {
+            -ms-grid-column: 9;
+            -ms-grid-row: 1;
+
+        }
+
+
+.homepage section[role=main] {
+    margin-left: 120px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .homepage section[role=main] {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: portrait) {
+    .homepage section[role=main] {
+        margin-left: 100px;
+    }
+}

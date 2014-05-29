@@ -1,0 +1,243 @@
+﻿body {
+}
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+
+}
+
+@media screen and (-ms-view-state: filled) {
+
+}
+
+@media screen and (-ms-view-state: snapped) {
+
+
+    .win-backbutton {
+        position: absolute;
+        top: auto;
+        left: auto;
+    }
+
+    .fragment.homepage .main.snapped .SnapBgClass .info1 {
+        background-color: #ff8c00;
+    }
+
+    .fragment.homepage .main.snapped .SnapBgClass .info2 {
+        background-color: #ffb900;
+    }
+
+    .fragment.homepage .main.snapped .SnapBgClass .info3 {
+        background-color: #b71b21;
+    }
+
+    .fragment.homepage .main.snapped .SnapBgClass .info4 {
+        background-color: #0072bf;
+    }
+
+    .fragment.homepage .main.snapped .SnapBgClass .info5 {
+        background-color: #00abe1;
+    }
+
+    .fragment.homepage .main.snapped .SnapBgClass .info6 {
+        background-color: #00c7bb;
+    }
+
+    .fragment.homepage .main.snapped .SnapBgClass .info7 {
+        background-color: #ca4b26;
+    }
+
+    .main.snapped {
+        /*-ms-grid-columns: 120px 1fr;
+        -ms-grid-rows: 85px;*/
+        -ms-grid-columns: (1px)[320];
+        -ms-grid-rows: (1px)[768];
+        display: -ms-grid;
+        height: 100%;
+        width: 100%;
+        background: #1a1a1a;
+    }
+
+        .main.snapped header {
+            display: block;
+            position: fixed;
+            top: 50px;
+            left: 120px;
+            font: 18px Segoe UI;
+            font-weight: bolder;
+        }
+
+            /*.main.snapped header .topHeader {
+                -ms-grid-column: 2;
+                -ms-grid-row: 2;
+                font-size: 20pt;
+            }*/
+
+        .main.snapped .content {
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 320;
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 768;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            height: 100%;
+            background: #1a1a1a;
+        }
+
+            .main.snapped .content .columns {
+                -ms-grid-rows: 1fr;
+                display: -ms-grid;
+                /*height: calc(100% - 50px);*/
+                height: 100%;
+                width: 8500px;
+                overflow-y: hidden;
+            }
+
+            .main.snapped .content .column {
+                float: left;
+                -ms-grid-columns: 1fr;
+                -ms-grid-rows: 80px;
+                display: -ms-grid;
+                height: 100%;
+            }
+
+            .main.snapped .content .columnTitle {
+                font: 20px Segoe UI;
+                font-weight: lighter;
+                line-height:0.8em;
+            }
+
+            .main.snapped .content .info {
+                -ms-grid-row: 2;
+                display: -ms-grid;
+    /*
+                width: (1px)[auto];
+        */
+                /*-ms-grid-columns: (1px)[900];*/
+                -ms-grid-rows: 1fr;
+
+            }
+            
+            .main.snapped .content .rows {
+
+            }
+            
+            .main.snapped .content .rows .rowTitle {
+                background: #000;
+                padding: 10px;
+                width: 320px !important;
+            }
+            
+            .main.snapped .content .rows > * {
+                max-width: 280px !important;
+                padding: 20px;
+                height: 100%;
+            }
+
+            .main.snapped .content .rows * {
+                width: auto !important;
+                max-width: 300px !important;
+                overflow: hidden;
+            }
+
+                .main.snapped .content .rows .info > div {
+                    margin-bottom: 20px;
+                }
+            
+            .main.snapped .content .rows .gridsixlivetiles .griditem, .main.snapped .content .rows .iconographic.gridfourlivetiles, .main.snapped .content .rows .iconographic.gridfourlivetiles .griditem, .main.snapped .content .rows .iconographic.gridfourlivetiles .griditem table {
+                width: 280px !important;
+                overflow: visible;
+            }
+        
+            .main.snapped .content .rows .leftmessagebodyhero {
+                height: auto;
+            }
+
+                .main.snapped .content .rows .leftmessagebodyhero .heroimg, .main.snapped .content .rows img {
+                    height: auto;
+                    max-width: 100% !important;
+                    position: static;
+                }
+       
+    .snapped.main .largevideotile {
+        width:280px;
+        height:163px;
+        margin-bottom: 10px;
+    }
+
+    .snapped.main .smallverticallinktile, .snapped.main .topmessagebottombody {
+        margin-bottom: 20px;
+    }
+
+    .snapped.main .leftmessagebodyrightimage_wide {
+        height:auto;
+        overflow:hidden;
+    }
+
+    .snapped.main .clearfix {
+        height:auto;
+        overflow:hidden;
+    }
+
+    .snapped.main .absbottom,
+    .snapped.main .abstop,
+    .snapped.main .absleft,
+    .snapped.main .absright {
+        position:static;
+        top:auto;
+        left:auto;
+        right:auto;
+        bottom:auto;
+    }
+    .snapped.main .box2by1,
+    .snapped.main .box1by1
+     {
+        position:static;
+        height:auto;
+        width:auto;
+    }
+    .snapped.main .large-video-player {
+        height: auto;
+        width: 280px;
+        line-height: .8em;        
+    }
+
+    .snapped.main .bottommessagetophero .messaging, .snapped.main .bottommessagetophero .messaging div {
+        height: auto;
+    }
+    
+
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+
+}
+
+.homepage section[role=main] {
+    margin-left: 120px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .homepage section[role=main] {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: portrait) {
+    .homepage section[role=main] {
+        margin-left: 100px;
+    }
+}
+
+
+.snapped.main .content .rows .win-backbutton {
+    position:static;
+    width:30px !Important;
+    height:30px !Important;
+}
+
+.snapped.main .backbutton-container {
+display:none;
+}
+.snapped.main.back-enabled .backbutton-container {
+display:block;
+}

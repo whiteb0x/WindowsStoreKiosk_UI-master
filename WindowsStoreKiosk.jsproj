@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>ef491c28-16ac-4b88-8a40-33e4dcf2886e</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <PackageCertificateKeyFile>WindowsStoreKiosk_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="..\..\..\..\..\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets">
+      <Link>Microsoft.Common.targets</Link>
+    </Content>
+    <Content Include="content\advertiser.json" />
+    <Content Include="content\assets\advertiser_bg_1366.png" />
+    <Content Include="content\assets\attractloops\ArtistNoSlate.wmv" />
+    <Content Include="content\assets\attractloops\Artist_1280x720HD_NoSlate.wmv" />
+    <Content Include="content\assets\attractloops\BestCoastREV1280X720HD_NoSlate.wmv" />
+    <Content Include="content\assets\attractloops\Bird30_US_R4_SXFT0600000H_1280x720_NoSlate.wmv" />
+    <Content Include="content\assets\attractloops\SigninWithaSmile1280x720_NoSlate.wmv" />
+    <Content Include="content\assets\attractloops\W8Shop_CAT02_0821_720p30_H264_8000k.mp4" />
+    <Content Include="content\assets\attractloops\W8Shop_Sizzle_0821_720p30_H264_8000k.mp4" />
+    <Content Include="content\assets\designer_bg_1366.png" />
+    <Content Include="content\assets\home_allrecipes_vid_thumbnail.png" />
+    <Content Include="content\assets\home_bg_1366.png" />
+    <Content Include="content\assets\home_box_vid_thumbnail.png" />
+    <Content Include="content\assets\home_ratio_vid_thumbnail.png" />
+    <Content Include="content\assets\home_semzo_advertisers.png" />
+    <Content Include="content\assets\home_semzo_designer.png" />
+    <Content Include="content\assets\home_semzo_intro.png" />
+    <Content Include="content\assets\home_semzo_iosdev.png" />
+    <Content Include="content\assets\home_semzo_opportunity.png" />
+    <Content Include="content\assets\home_semzo_webdev.png" />
+    <Content Include="content\assets\home_semzo_windev.png" />
+    <Content Include="content\assets\home_stumbleupon_vid_thumbnail.png" />
+    <Content Include="content\assets\home_thumbnail_box_small_r27_c16.png" />
+    <Content Include="content\assets\home_thumbnail_box_small_r28_c16.png" />
+    <Content Include="content\assets\home_thumbnail_box_small_r29_c9.png" />
+    <Content Include="content\assets\home_thumbnail_box_small_r30_c16.png" />
+    <Content Include="content\assets\home_thumbnail_box_small_r31_c16.png" />
+    <Content Include="content\assets\home_thumbnail_box_small_r32_c9.png" />
+    <Content Include="content\assets\home_thumbnail_box_small_r36_c9.png" />
+    <Content Include="content\assets\home_thumbnail_box_small_r39_c9.png" />
+    <Content Include="content\assets\home_thumbnail_box_small_r41_c9.png" />
+    <Content Include="content\assets\intro_allrecipes_logo.png" />
+    <Content Include="content\assets\intro_allrecipes_thumb.png" />
+    <Content Include="content\assets\intro_allrecipes_vid_thumbnail.png" />
+    <Content Include="content\assets\intro_app_pages.png" />
+    <Content Include="content\assets\intro_box_icon.png" />
+    <Content Include="content\assets\intro_box_thumb.png" />
+    <Content Include="content\assets\intro_box_vid_thumbnail.png" />
+    <Content Include="content\assets\intro_ratio_logo.png" />
+    <Content Include="content\assets\intro_ratio_thumb.png" />
+    <Content Include="content\assets\intro_ratio_vid_thumbnail.png" />
+    <Content Include="content\assets\intro_stumbleupon_logo.png" />
+    <Content Include="content\assets\intro_stumbleupon_thumb.png" />
+    <Content Include="content\assets\intro_stumbleupon_vid_thumbnail.png" />
+    <Content Include="content\assets\ios_background_image.png" />
+    <Content Include="content\assets\ios_bg_1366.png" />
+    <Content Include="content\assets\ios_box_logo.png" />
+    <Content Include="content\assets\ios_box_vid_thumbnail.png" />
+    <Content Include="content\assets\ios_semzo_box_logo.png" />
+    <Content Include="content\assets\opp_app_pages.png" />
+    <Content Include="content\assets\opp_devices.png" />
+    <Content Include="content\assets\opp_graph.png" />
+    <Content Include="content\assets\opp_tablet.png" />
+    <Content Include="content\assets\ratio_video2.png" />
+    <Content Include="content\assets\small_tile.png" />
+    <Content Include="content\assets\store_kiosk_home_bg2.png" />
+    <Content Include="content\assets\webdeveloper_bg_1366.png" />
+    <Content Include="content\assets\webdev_stumbleupon_logo.png" />
+    <Content Include="content\assets\webdev_stumbleupon_vid_thumbnail.png" />
+    <Content Include="content\assets\win8dev_bg_1366.png" />
+    <Content Include="content\attractloops.json" />
+    <Content Include="content\ContentManifest.json" />
+    <Content Include="content\designer.json" />
+    <Content Include="content\home.json" />
+    <Content Include="content\iosdeveloper.json" />
+    <Content Include="content\testpage.json" />
+    <Content Include="content\views\boxvideoplayer.html" />
+    <Content Include="content\views\leftmessagebodyhero.html" />
+    <Content Include="content\webdeveloper.json" />
+    <Content Include="content\windowsdeveloper.json" />
+    <Content Include="css\Controls.css" />
+    <Content Include="css\default.css" />
+    <Content Include="default.html" />
+    <Content Include="images\smalllogo.png" />
+    <Content Include="images\splashscreen.png" />
+    <Content Include="images\widelogo.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="js\Controls2.js" />
+    <Content Include="js\Controls.js" />
+    <Content Include="js\default.js" />
+    <Content Include="js\jquery.1.8.3.js" />
+    <Content Include="js\Kiosk.js" />
+    <Content Include="js\navigator.js" />
+    <Content Include="js\StickyHeader.js" />
+    <Content Include="pages\AttractLoopPlayer\AttractLoopPlayer.css" />
+    <Content Include="pages\AttractLoopPlayer\AttractLoopPlayer.html" />
+    <Content Include="pages\AttractLoopPlayer\AttractLoopPlayer.js" />
+    <Content Include="pages\home\home.css" />
+    <Content Include="pages\home\home.html" />
+    <Content Include="pages\home\home.js" />
+    <Content Include="pages\KioskSettings\KioskSettings.css" />
+    <Content Include="pages\KioskSettings\KioskSettings.html" />
+    <Content Include="pages\KioskSettings\KioskSettings.js" />
+    <Content Include="pages\PageSnapped\PageSnapped.css" />
+    <Content Include="pages\PageSnapped\PageSnapped.html" />
+    <Content Include="pages\PageSnapped\PageSnapped.js" />
+    <Content Include="pages\Page\Page.css" />
+    <Content Include="pages\Page\Page.html" />
+    <Content Include="pages\Page\Page.js" />
+    <Content Include="views\default.html" />
+    <Content Include="views\leftmessagebodyhero.html" />
+    <Content Include="views\boxvideoplayer.html" />
+    <None Include="WindowsStoreKiosk_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.WinJS.1.0.RC, Version=1.0" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <!-- To modify your build process, add your task inside one of the targets below then uncomment
+       that target and the DisableFastUpToDateCheck PropertyGroup. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  -->
+</Project>

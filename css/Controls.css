@@ -1,0 +1,699 @@
+﻿/* kiosk content layouts */
+    
+.leftmessagebodyrightimage_wide {
+    width: 900px;
+    height: 230px;
+    /*background: #000000;*/
+}
+    .leftmessagebodyrightimage_wide .messaging {
+        float: left;
+        width: 400px;
+    }
+
+    .leftmessagebodyrightimage_wide .messaging h3 {
+        width: 350px;
+        font: 42px Segoe UI;
+        font-weight: lighter;
+        color: #ffffff;
+        margin-bottom: 20px;
+        line-height:42px;
+    }
+
+    .leftmessagebodyrightimage_wide .messaging .body {
+        font: 16px Calibri;
+        color: #ffffff;
+        margin-top: 30px;
+    }
+
+    .leftmessagebodyrightimage_wide img {
+        float: right;
+    }
+
+.largevideotile {
+    width: 445px;
+    height: 250px;
+}
+
+    .largevideotile img {
+        width: 445px;
+        height: 250px;
+    }
+
+
+.smallhorizontallinktile {
+    width: 218px;
+    height: 120px;
+}
+    .smallhorizontallinktile img {
+        width: 218px;
+        height: 120px;    
+    }
+
+.smallverticallinktile {
+    width: 250px;
+    height: 500px;
+}
+
+    .smallverticallinktile .messaging {
+        float: left;
+        width: 250px;
+        height: 500px;
+    }
+
+        .smallverticallinktile .messaging h3 {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font: 42px Segoe UI;
+            font-weight: lighter;
+            width: 230px;
+            height: 230px;
+            padding: 10px;
+            line-height:42px;
+        }
+
+        .smallverticallinktile .messaging div {
+            background-color: #ffffff;
+            color: #000000;
+            font: 16px Calibri;
+            color: #b71b21;
+            width :230px;
+            height: 230px;
+            padding: 10px;
+        }
+    
+.heromessagebodyvertical {
+    width: 440px;
+    height: 580px;
+}
+    .heromessagebodyvertical .hero-image {
+        padding-left: 10%;
+    }
+    .heromessagebodyvertical img {
+        top: 0px;
+        margin:0px auto;
+    }
+
+    .heromessagebodyvertical .messaging {
+        top: 202px;
+        left: 0px;
+
+    }
+
+        .heromessagebodyvertical .messaging h3 {
+            top: 0px;
+            left: 0px;
+            width: 440px;
+            font: 42px Segoe UI;
+            font-weight: lighter;  
+            line-height: 0.8em;
+            margin: 30px 0;      
+        }
+
+        .heromessagebodyvertical .messaging .text {
+            top: 124px;
+            left: 0px;
+            width: 440px;
+            font: 16px Calibri;
+        }
+.abstop {
+    position:absolute !important;
+    top:0px;
+}
+.absleft {
+    position:absolute !important;
+    left:0px;
+}
+.absright {
+    position:absolute !important;
+    right:0px;
+}
+.absbottom {
+    position:absolute !important;
+    bottom:0px;
+}
+        .heromessagebodyvertical .messaging ul {
+            padding-left: 0;
+        }
+
+        .heromessagebodyvertical .messaging li {
+            margin-bottom: 10px;
+        }
+
+.leftmessagebodyhero {
+    width: 1000px;
+    height: 500px;
+    position:relative;
+}
+
+    .leftmessagebodyhero .heroimg {
+        position:absolute;
+        top:0px;
+        right:0px;
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+    }
+
+.rightmessagebodybottom .heroimg {
+    width:1000px;
+    min-height:250px;
+    overflow:hidden;
+}
+    
+    .leftmessagebodyhero.inverted .heroimg {
+        position:absolute; top:0px;
+        left:0px;
+        z-index:0;
+        width: 1000px;
+        height: 500px;
+        overflow: hidden;
+
+    }
+    .leftmessagebodyhero.inverted .darkbox,
+    .leftmessagebodyhero.inverted .lightbox
+     {
+        z-index:10;
+    }
+    .leftmessagebodyhero.inverted {
+        
+    }
+    /*
+    .leftmessagebodyheroinverted .headercontainer {
+        background: #000;
+        color: #b71b21;
+        width: 500px;
+        height: 250px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+        .leftmessagebodyheroinverted .headercontainer h3 {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font: 42px Segoe UI;
+            font-weight: lighter;
+            width: 480px;
+            height: 230px;
+            padding: 10px;
+        }
+
+        .leftmessagebodyheroinverted .messaging {
+            background-color: #ffffff;
+            color: #000000;
+            font: 16px Calibri;
+            color: #b71b21;
+            width: 230px;
+            height: 230px;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 9;
+        }        
+*/
+.rightmessagebodybottom {
+    width: 1000px;
+    height: 500px;
+    position:relative;
+}
+
+.topmessagebottombody {
+    width: 500px;
+    height: 500px;
+    overflow:hidden;
+}
+
+    .topmessagebottombody .messaging {
+        float: left;
+        width: 500px;
+        height: 500px;
+    }
+
+        .topmessagebottombody .messaging h3 {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font: 42px Segoe UI;
+            font-weight: lighter;
+            width: 480px;
+            height: 230px;
+            padding: 10px;
+            line-height:42px;
+        }
+
+        .topmessagebottombody .messaging div {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font: 16px Calibri;
+            width :480px;
+            height: 230px;
+            padding: 10px;
+        }
+        
+.annotatedVideo {
+    height: 500px;
+    width: 916px;
+}  
+
+.leftmessagebodyrightvideo {
+    width: 1000px;
+    height: 500px;
+}
+
+    .leftmessagebodyrightvideo img {
+        float: right;
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .leftmessagebodyrightvideo .messaging {
+        float: left;
+        width: 500px;
+        height: 500px;
+    }
+
+        .leftmessagebodyrightvideo .messaging h3 {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font: 42px Segoe UI;
+            font-weight: lighter;
+            width: 480px;
+            height: 230px;
+            padding: 10px;
+            line-height:42px;
+
+        }
+
+        .leftmessagebodyrightvideo .messaging div {
+            background-color: #ffffff;
+            color: #000000;
+            font: 16px Calibri;
+            color: #b71b21;
+            width :480px;
+            height: 230px;
+            padding: 10px;
+        }
+
+.gridfourlivetiles {
+    height: 550px;
+    width: 550px;
+}
+
+    .gridfourlivetiles .griditem,
+    .gridsixlivetiles .griditem
+     {
+        background: #1a1a1a;
+        font: 20px 'Segoe UI';
+        line-height:28px;
+        float: left;
+        height: 245px;
+        width: 245px;
+        margin:0 10px 10px 0;
+        color:#ffffff;
+        position:relative;
+    }
+    .gridfourlivetiles.iconographic .griditem {
+        color:#1a1a1a;
+        background:#fff;
+    }
+        .gridfourlivetiles.iconographic .griditem .gridtextholder {
+            width:205px;
+            bottom:20px;
+            left:20px;
+            position:absolute;
+        }
+    .gridfourlivetiles.iconographic .gridtitle {
+        font:20px 'Segoe UI';
+            font-weight:500;
+            color:#333;
+    }
+    .gridfourlivetiles.iconographic .gridbody {
+        font:14px Calibri;
+            color:#666;
+    }    
+        .gridfourlivetiles.iconographic .griditem
+.griditem .gridtext {
+    width:209px;
+    position:absolute;
+    bottom:25px;
+    left:18px;
+    letter-spacing:2px;
+}
+    
+.gridsixlivetiles {
+    height: 1000px;
+    width: 1000px;
+}
+.bottommessagetophero {
+    float: left;
+    width: 2000px;
+    height: 500px;
+}
+
+    .bottommessagetophero .messaging {
+        float: left;
+        width: 450px;
+        height: 500px;
+        margin: 0 10px 0 0;
+    }
+
+        .bottommessagetophero .messaging h3 {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font: 42px Segoe UI;
+            font-weight: lighter;
+            width: 410px;
+            height: 230px;
+            padding: 10px 20px;
+            line-height:42px;
+        }
+
+        .bottommessagetophero .messaging div {
+            background-color: #ffffff;
+            font: 16px Calibri;
+            color: #b71b21;
+            width :445px;
+            height: 250px;
+        }
+
+        .bottommessagetophero .messaging img {
+            height: 250px;
+            width: 450px;
+        }
+
+        .boxedvideoplayer {
+            max-width: 667px; 
+            max-height: 375px;
+        }
+
+.boxwrapper {
+    height:500px;
+    position:relative;
+}
+
+.standardtitle {
+    font:42px/42px 'Segoe UI';
+    letter-spacing:-2px;
+    font-weight:lighter;
+    color:#fff;    
+}
+.bodytext {
+    color: #ffffff;
+    font: 16px calibri;
+}
+.darkbox, .lightbox {
+    padding:20px;
+
+    overflow:hidden;
+}
+
+.darkbox {
+    background:#1a1a1a;
+    color:#fff;
+}
+.lightbox {
+    background:#fff;
+    color:#1a1a1a;
+}
+    .lightbox.darkred {
+color:#b71b21;
+    }
+    
+.box1by1-gap {
+    width:205px;
+    height:205px;
+    padding:20px;
+    position:relative;
+}
+
+.box1by1 {
+    width:210px;
+    height:210px;
+    padding:20px;
+    position:relative;
+}
+.box2by1
+{
+    width:460px;
+    height:210px;
+    padding:20px;
+    position:relative;
+}
+.shorttiledark .darkbox.box2by1 {
+    height:110px;
+}
+.talltilelight .lightbox.box2by1 {
+    height:310px;
+}
+
+.box2by2 
+{
+    width:460px;
+    height:210px;
+    padding:20px;
+    position:relative;
+}
+/*************
+    PAGE SPECIFIC OVERRIDES    
+    */
+.advertiserContentBlock {
+    width:1500px;
+}
+.advertiserContentBlock .topmessagebottombody {
+    position:absolute;
+    left:0px;
+    width:500px;
+}
+.advertiserContentBlock .topmessagebottombody .standardtitle
+{
+    color:#b71b21;
+}
+
+.advertiserContentBlock .annotatedVideo {
+    position:absolute;
+    right:0px;
+    top:0px;
+}
+
+.advertiserContentBlock .annotatedVideo .boxedvideo {
+        background-color: #bbbbbb;
+        height: 375px;
+        width: 666px;
+        position:absolute; 
+        right:0px;
+        top:0px;
+        float: right;
+    }
+
+.color1 .darkbox {
+}
+.color1 .lightbox {
+    color:#b71b21;
+}
+
+.color2 .darkbox {
+
+    background:#fff;
+    color:#0072bf    
+}
+.color2 .lightbox {
+    background:#1a1a1a;
+    color:#fff;
+}
+.color3 .lightbox {
+    background:#ffffff;
+    color:#00abe1;
+}
+.color3 .darkbox {
+    background:#1a1a1a;
+    color:#ffffff;
+}
+.color4 .darkbox {
+    background:#ffffff;
+    color:#00c7bb;
+}
+.color4 .lightbox {
+    background:#1a1a1a;
+    color:#ffffff;
+}
+.color5 .lightbox {
+    background:#ffffff;
+    color:#ca4b26;
+}
+.color5 .darkbox {
+    background:#1a1a1a;
+    color:#ffffff;
+}
+
+.blue-color1 .darkbox {
+    color:#0072bf;
+    background:#fff;
+}
+.blue-color1 .lightbox {
+    color:#fff;
+    background:#1a1a1a;
+}
+.blue-color2 .darkbox {
+    color:#fff;
+    background:#01204e;
+}
+.blue-color2 .lightbox {
+    color:#fff;
+    background:#01204e;
+}
+.blue-color3 .darkbox {
+    color:#fff;
+    background:#20bdf0;
+}
+.blue-color3 .lightbox {
+    color:#fff;
+    background:#20bdf0;
+}
+.blue-color4 .darkbox {
+    color:#fff;
+    background:#1a1a1a;
+}
+.blue-color4 .lightbox {
+    color:#fff;
+    background:#1a1a1a;
+}
+.blue-color5 .darkbox {
+    color:#fff;
+    background:#1a1a1a;
+}
+.blue-color5 .lightbox {
+    color:#1a1a1a;
+    background:#fff;
+}
+.title-icon {
+    position:absolute;
+    left:20px;
+    bottom:20px;
+}
+.webdev-color1 .darkbox {
+    background:#fff;
+    color:#00abe1
+}
+.webdev-color1 .lightbox {
+    background:#1a1a1a;
+    color:#fff
+}
+.webdev-color2 .darkbox,.webdev-color2 .lightbox {
+    background:#0072bf;
+    color:#fff
+}
+.webdev-color3 .darkbox,.webdev-color3 .lightbox {
+    background:#02214f;
+    color:#fff
+}
+.webdev-color4 .darkbox,.webdev-color4 .lightbox {
+    background:#1a1a1a;
+    color:#fff
+}
+.webdev-color5 .darkbox {
+    color:#fff;
+    background:#1a1a1a;
+}
+.webdev-color5 .lightbox {
+    color:#1a1a1a;
+    background:#fff;
+}
+.windev-color1 .darkbox {
+    color:#00c7bb;
+    background:#fff;
+}
+.windev-color1 .lightbox {
+    color:#fff;
+    background:#1a1a1a;
+}
+.windev-color2 .darkbox {
+    color:#00c7bb;
+    background:#fff;
+}
+.windev-color2 .lightbox {
+    color:#00c7bb;
+    background:#fff;
+}
+.windev-color3 .darkbox {
+    color:#fff;
+    background:#108272;
+}
+.windev-color3 .lightbox {
+    color:#fff;
+    background:#108272;
+}
+.windev-color4 .darkbox,
+.windev-color4 .lightbox {
+    background:#1a1a1a;
+    color:#fff;
+}
+.windev-color5 .darkbox,
+.windev-color5 .lightbox {
+    background:#1ab194;
+    color:#fff;
+}
+.windev-color6 .darkbox {
+    color:#fff;
+    background:#1a1a1a;
+}
+.windev-color6 .lightbox {
+    color:#1a1a1a;
+    background:#fff;
+}
+
+.design-color1 .darkbox {
+    color:#ca4b26;
+    background:#fff;
+}
+.design-color1 .lightbox {
+    color:#fff;
+    background:#1a1a1a;
+}
+.design-color2 .darkbox,
+.design-color2 .lightbox {
+    color:#fff;
+    background:#fd8b24;
+}
+.design-color3 .darkbox,
+.design-color3 .lightbox {
+    color:#fff;
+    background:#1a1a1a;
+}
+.design-color4 .darkbox,
+.design-color4  .lightbox {
+    color:#ca4b26;
+    background:#fff;
+}
+.design-color5 .darkbox,
+.design-color5 .lightbox {
+    color:#fff;
+    background:#fd8b24;
+}
+.design-color6 .darkbox {
+    color:#fff;
+    background:#1a1a1a;
+}
+.design-color6 .lightbox {
+    color:#1a1a1a;
+    background:#fff;
+}
+
+
+
+.large-video-player {
+    width:667px;
+    height:375px;
+}
+.boxedvideocontainer {
+position:relative;
+width:913px;
+height:500px;
+}
+.override-webdevelopers .bodytext {
+/*
+    font-size: 15px;
+    line-height:15px;
+    */
+}
